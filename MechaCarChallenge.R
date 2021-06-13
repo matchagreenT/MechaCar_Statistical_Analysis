@@ -28,3 +28,12 @@ lot-demo <- suspension %>% group_by
 %>% summarize(Mean=mean(PSI),median=(PSI), 
               Variance=var(PSI), SD=sd(PSI))
 
+-------------------------------------------------
+  
+t.test(suspension$PSI, mu = 1500)
+
+t.test(subset(suspension, lot_demo=="Lot1)$PSI, mu = 1500)
+
+t.test(subset(suspension, lot_demo=="Lot2")$PSI, mu = 1500)
+
+t.test(subset(suspension, lot_demo=="Lot3")$PSI, mu = 1500)
